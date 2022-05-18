@@ -9,6 +9,8 @@ public class Cat {
 
     // 1) добавим статус. можно конечно и enum, но не обязательно, т.к. статус приватный
     private String status;
+    private String name;
+    private String color;
 
     public static int count;
 
@@ -38,6 +40,12 @@ public class Cat {
 
     public Double getWeight() {
         return weight;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getColor() {
+        return color;
     }
 
     //Урок 2. Метод, параметры, return
@@ -83,6 +91,22 @@ public class Cat {
 //3.	Создайте три объекта класса Cat в методе main(), используя метод getKitten().
 
     public Cat(Double amount) {
-        this.weight = 1100.0;
+        this.weight = amount;
     }
+    public Cat(Double amount,String name) {
+        this.weight = amount;
+        this.name = name;
+    }
+    public Cat(Double amount,String name, String color) {
+        this.weight = amount;
+        this.name = name;
+        this.color = color;
+    }
+
+//    public void setName (String name) {
+//        this.name = name;
+//    }
+//    public String getName() {
+//        return name;
+//    }
 }

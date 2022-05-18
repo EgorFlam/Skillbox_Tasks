@@ -87,6 +87,17 @@ public class Loader {
         System.out.println("kitten1 weight: " + kitten1.getWeight());
         Cat kitten2 = getKitten();
         System.out.println("kitten2 weight: " + kitten1.getWeight());
+        System.out.println("===========================================");
+
+        Cat cat45 = new Cat(1100.0);
+        System.out.println("Cat45 " + cat45.getWeight());
+        System.out.println("===========================================");
+        Cat cat46 = new Cat(1100.0, " Gena ");
+        System.out.println("Cat46 " + cat46.getWeight() + cat46.getName());
+        System.out.println("===========================================");
+        Cat cat47 = new Cat(1100.0, " Gena ", " Green ");
+        System.out.println("Cat47 " + cat47.getWeight() + cat47.getName() + cat47.getColor());
+
 
     }
 
