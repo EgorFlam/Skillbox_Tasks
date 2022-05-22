@@ -102,11 +102,5 @@ public class Cat {
         this.name = name;
         this.color = color;
     }
-
-//    public void setName (String name) {
-//        this.name = name;
-//    }
-//    public String getName() {
-//        return name;
-//    }
+    
 }
