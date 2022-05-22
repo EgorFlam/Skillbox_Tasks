@@ -1,3 +1,5 @@
+import java.net.NoRouteToHostException;
+
 public class Loader {
 
     public static void main(String[] args) {
@@ -90,14 +92,28 @@ public class Loader {
         System.out.println("===========================================");
 
         Cat cat45 = new Cat(1100.0);
-        System.out.println("Cat45 " + cat45.getWeight());
+        System.out.println("Cat45:" + "\nWeight: " + cat45.getWeight());
         System.out.println("===========================================");
-        Cat cat46 = new Cat(1100.0, " Gena ");
-        System.out.println("Cat46 " + cat46.getWeight() + cat46.getName());
+        Cat cat46 = new Cat(1100.0, "Gena");
+        System.out.println("Cat46:" + "\nWeight: " + cat46.getWeight() + "\nName: " + cat46.getName());
         System.out.println("===========================================");
-        Cat cat47 = new Cat(1100.0, " Gena ", " Green ");
-        System.out.println("Cat47 " + cat47.getWeight() + cat47.getName() + cat47.getColor());
+        Cat cat47 = new Cat(1100.0, "Maks", "Green");
+        System.out.println("Cat47:" + "\nWeight: " + cat47.getWeight() + "\nName: " + cat47.getName() + "\nColor: " + cat47.getColor());
+        System.out.println("===========================================");
 
+//    Урок 7. Копирование объектов
+//    Цель задания
+//    Научиться копировать параметры объекта с помощью геттеров и сеттеров.
+//    Что нужно сделать:
+//    Сделайте метод создания «глубокой» копии кошки. Это означает, что все параметры
+//    одной кошки равны параметрам другой. Используйте для этого метод копирования или конструктор копирования.
+
+        Cat clone = new Cat(); //Shallow copy
+        clone.setWeight(cat47.getWeight());
+        clone.setName(cat47.getName());
+        clone.setColor(cat47.getColor());
+        System.out.println("Clone:" + "\nWeight: " + clone.getWeight() + "\nName: " + clone.getName() +
+                "\nColor: " + clone.getColor());
 
     }
 

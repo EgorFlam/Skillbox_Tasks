@@ -21,9 +21,21 @@ public class Cat {
         minWeight = 1000.0;
         maxWeight = 9000.0;
         count++;
-
     }
-
+    // Урок 6 ============================
+    public Cat(Double weight) {
+        this.weight = weight;
+    }
+    public Cat(Double weight,String name) {
+        this.weight = weight;
+        this.name = name;
+    }
+    public Cat(Double weight,String name, String color) {
+        this.weight = weight;
+        this.name = name;
+        this.color = color;
+    }
+//===============================================
     public void meow() {
         weight = weight - 1;
         System.out.println("Meow");
@@ -41,11 +53,22 @@ public class Cat {
     public Double getWeight() {
         return weight;
     }
+    public void setWeight(double weight) { //добавим сеттер (7 уорок)
+        this.weight = weight;
+    }
+
     public String getName() {
         return name;
     }
+    public void setName(String name) { //добавим сеттер (7 уорок)
+        this.name = name;
+    }
+
     public String getColor() {
         return color;
+    }
+    public void setColor(String color) { //добавим сеттер (7 уорок)
+        this.color = color;
     }
 
     //Урок 2. Метод, параметры, return
@@ -90,17 +113,28 @@ public class Cat {
 //      вес кошки. Используйте описание из видеоурока.
 //3.	Создайте три объекта класса Cat в методе main(), используя метод getKitten().
 
-    public Cat(Double amount) {
-        this.weight = amount;
-    }
-    public Cat(Double amount,String name) {
-        this.weight = amount;
-        this.name = name;
-    }
-    public Cat(Double amount,String name, String color) {
-        this.weight = amount;
-        this.name = name;
-        this.color = color;
-    }
-    
+
+
+//    Урок 7. Копирование объектов
+//    Цель задания
+//    Научиться копировать параметры объекта с помощью геттеров и сеттеров.
+//    Что нужно сделать:
+//    Сделайте метод создания «глубокой» копии кошки. Это означает, что все параметры
+//    одной кошки равны параметрам другой. Используйте для этого метод копирования или конструктор копирования.
+
+//    public String toString() {
+//        return name;
+//
+//    }
+//    public Object clone() {
+//        return new Cat(weight, name, color);
+//    }
+//
+//    public void setOtherCat(Cat otherCat) {
+//        this.otherCat = (Cat) otherCat.clone();
+//    }
+//    public Cat getOtherCat() {
+//        return (Cat) otherCat.clone();
+//    }
+
 }
