@@ -1,4 +1,4 @@
-public class Cat {
+public class Cat implements Cloneable{
     private double originWeight;
     private double weight;
 
@@ -122,19 +122,10 @@ public class Cat {
 //    Сделайте метод создания «глубокой» копии кошки. Это означает, что все параметры
 //    одной кошки равны параметрам другой. Используйте для этого метод копирования или конструктор копирования.
 
-//    public String toString() {
-//        return name;
-//
-//    }
-//    public Object clone() {
-//        return new Cat(weight, name, color);
-//    }
-//
-//    public void setOtherCat(Cat otherCat) {
-//        this.otherCat = (Cat) otherCat.clone();
-//    }
-//    public Cat getOtherCat() {
-//        return (Cat) otherCat.clone();
-//    }
 
+    @Override
+    protected Cat clone() throws CloneNotSupportedException { // Shallow copy (поверхностное копирование)
+        return(Cat) super.clone();
+    }
 }
+

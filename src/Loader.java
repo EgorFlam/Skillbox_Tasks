@@ -108,12 +108,13 @@ public class Loader {
 //    Сделайте метод создания «глубокой» копии кошки. Это означает, что все параметры
 //    одной кошки равны параметрам другой. Используйте для этого метод копирования или конструктор копирования.
 
-        Cat clone = new Cat(); //Shallow copy
-        clone.setWeight(cat47.getWeight());
-        clone.setName(cat47.getName());
-        clone.setColor(cat47.getColor());
-        System.out.println("Clone:" + "\nWeight: " + clone.getWeight() + "\nName: " + clone.getName() +
-                "\nColor: " + clone.getColor());
+        Cat catClone = cat47; //Shallow copy
+        catClone.getWeight();
+        catClone.getName();
+        catClone.getColor();
+        System.out.println();
+        System.out.println("Clone:" + "\n" + catClone.getWeight() + "\n" + catClone.getName()
+                + "\n" + catClone.getColor());
 
     }
 
